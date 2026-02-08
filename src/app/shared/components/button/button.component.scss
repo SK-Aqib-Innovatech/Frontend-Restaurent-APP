@@ -1,0 +1,128 @@
+@use '../../../styles/abstracts/variables' as *;
+
+.app-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font;
+  font-weight: $font-bold;
+  border-radius: $rounded-xl;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all $transition;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  
+  &:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // Sizes
+  &--sm {
+    height: 40px;
+    padding: 0 $space-6;
+    font-size: $text-sm;
+  }
+
+  &--md {
+    height: 56px;
+    padding: 0 $space-8;
+    font-size: $text-lg;
+  }
+
+  &--lg {
+    height: 64px;
+    padding: 0 $space-10;
+    font-size: $text-xl;
+  }
+
+  // Variants
+  &--primary {
+    background: $primary;
+    color: $background;
+    box-shadow: $shadow-primary;
+
+    &:hover:not(:disabled) {
+      background: lighten($primary, 5%);
+    }
+  }
+
+  &--secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: $text;
+    border: 1px solid $border;
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: $border-hover;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $text;
+
+    &:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $primary;
+    border: 2px solid $primary;
+
+    &:hover:not(:disabled) {
+      background: rgba($primary, 0.1);
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--loading {
+    pointer-events: none;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-2;
+    transition: opacity $transition-fast;
+
+    &--hidden {
+      opacity: 0;
+    }
+  }
+
+  &__loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__spinner {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+

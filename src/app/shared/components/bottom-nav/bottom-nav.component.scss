@@ -1,0 +1,6 @@
+// Minimal styles - using utilities
+@use '../../../styles/abstracts/mixins' as *;
+
+nav {
+  @include safe-bottom(32px);
+}

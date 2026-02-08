@@ -1,0 +1,79 @@
+// ==========================================================================
+// TYPOGRAPHY UTILITIES
+// Simple classes: text-xl, font-bold, text-muted
+// ==========================================================================
+
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// --------------------------------------------------------------------------
+// FONT SIZES
+// Usage: text-base, text-xl, text-2xl
+// --------------------------------------------------------------------------
+.text-xs { font-size: $text-xs; }      // 12px
+.text-sm { font-size: $text-sm; }      // 14px
+.text-base { font-size: $text-base; }  // 16px - default
+.text-lg { font-size: $text-lg; }      // 18px
+.text-xl { font-size: $text-xl; }      // 20px
+.text-2xl { font-size: $text-2xl; }    // 24px
+.text-3xl { font-size: $text-3xl; }    // 30px
+.text-4xl { font-size: $text-4xl; }    // 36px
+
+// --------------------------------------------------------------------------
+// FONT WEIGHTS
+// Usage: font-bold, font-medium
+// --------------------------------------------------------------------------
+.font-normal { font-weight: $font-normal; }       // 400
+.font-medium { font-weight: $font-medium; }       // 500
+.font-semibold { font-weight: $font-semibold; }   // 600
+.font-bold { font-weight: $font-bold; }           // 700
+.font-extrabold { font-weight: $font-extrabold; } // 800
+
+// --------------------------------------------------------------------------
+// LINE HEIGHTS
+// Usage: leading-tight, leading-normal
+// --------------------------------------------------------------------------
+.leading-tight { line-height: $leading-tight; }      // 1.2
+.leading-normal { line-height: $leading-normal; }    // 1.5
+.leading-relaxed { line-height: $leading-relaxed; }  // 1.6
+
+// --------------------------------------------------------------------------
+// TEXT COLORS
+// Usage: text-primary, text-muted
+// --------------------------------------------------------------------------
+.text-white { color: $text; }
+.text-muted { color: $text-muted; }     // Secondary text
+.text-subtle { color: $text-subtle; }   // Tertiary text
+.text-primary { color: $primary; }      // Brand color
+
+// --------------------------------------------------------------------------
+// TEXT ALIGNMENT
+// --------------------------------------------------------------------------
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+// --------------------------------------------------------------------------
+// TEXT TRANSFORM
+// --------------------------------------------------------------------------
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+// --------------------------------------------------------------------------
+// LETTER SPACING
+// --------------------------------------------------------------------------
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.05em; }
+.tracking-wider { letter-spacing: 0.1em; }
+.tracking-widest { letter-spacing: 0.15em; }
+
+// --------------------------------------------------------------------------
+// TEXT UTILITIES
+// --------------------------------------------------------------------------
+.truncate { @include truncate; }
+
+.line-clamp-1 { @include line-clamp(1); }
+.line-clamp-2 { @include line-clamp(2); }
+.line-clamp-3 { @include line-clamp(3); }

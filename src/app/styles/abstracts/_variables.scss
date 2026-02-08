@@ -1,0 +1,114 @@
+// ==========================================================================
+// DESIGN TOKENS - Simple & Easy to Understand
+// ==========================================================================
+
+// --------------------------------------------------------------------------
+// COLORS - Brand & UI Colors
+// --------------------------------------------------------------------------
+$primary: #ee9d2b;              // Brand orange
+$background: #121212;           // Dark background
+$surface: #1e1e1e;              // Cards, inputs
+$card: #1a1a1a;                 // Card background
+
+// Text Colors
+$text: #ffffff;                 // Primary text
+$text-muted: #a1a1a1;          // Secondary text
+$text-subtle: #666666;         // Tertiary text
+
+// Borders
+$border: rgba(255, 255, 255, 0.1);
+$border-hover: rgba(255, 255, 255, 0.2);
+
+// --------------------------------------------------------------------------
+// SPACING - 4px base scale (xs to 5xl)
+// --------------------------------------------------------------------------
+$space-1: 4px;    // 0.25rem
+$space-2: 8px;    // 0.5rem
+$space-3: 12px;   // 0.75rem
+$space-4: 16px;   // 1rem - base
+$space-5: 20px;   // 1.25rem
+$space-6: 24px;   // 1.5rem
+$space-8: 32px;   // 2rem
+$space-10: 40px;  // 2.5rem
+$space-12: 48px;  // 3rem
+$space-16: 64px;  // 4rem
+
+// --------------------------------------------------------------------------
+// TYPOGRAPHY - Font Sizes & Weights
+// --------------------------------------------------------------------------
+$font: 'Plus Jakarta Sans', sans-serif;
+
+// Font Sizes (matches Tailwind scale)
+$text-xs: 12px;   // 0.75rem
+$text-sm: 14px;   // 0.875rem
+$text-base: 16px; // 1rem - base
+$text-lg: 18px;   // 1.125rem
+$text-xl: 20px;   // 1.25rem
+$text-2xl: 24px;  // 1.5rem
+$text-3xl: 30px;  // 1.875rem
+$text-4xl: 36px;  // 2.25rem
+
+// Font Weights
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+$font-extrabold: 800;
+
+// Line Heights
+$leading-tight: 1.2;
+$leading-normal: 1.5;
+$leading-relaxed: 1.6;
+
+// --------------------------------------------------------------------------
+// BORDER RADIUS
+// --------------------------------------------------------------------------
+$rounded-sm: 8px;
+$rounded: 12px;     // base
+$rounded-lg: 16px;
+$rounded-xl: 20px;
+$rounded-2xl: 24px;
+$rounded-3xl: 32px;
+$rounded-full: 9999px;
+
+// --------------------------------------------------------------------------
+// SHADOWS
+// --------------------------------------------------------------------------
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+$shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+$shadow-primary: 0 10px 30px rgba($primary, 0.2);
+
+// --------------------------------------------------------------------------
+// TRANSITIONS
+// --------------------------------------------------------------------------
+$transition-fast: 150ms ease;
+$transition: 250ms ease;
+$transition-slow: 350ms ease;
+
+// --------------------------------------------------------------------------
+// Z-INDEX SCALE
+// --------------------------------------------------------------------------
+$z-base: 1;
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-overlay: 1040;
+$z-modal: 1050;
+$z-tooltip: 1070;
+
+// --------------------------------------------------------------------------
+// IONIC VARIABLES (for Ionic components)
+// --------------------------------------------------------------------------
+:root {
+  --ion-color-primary: #{$primary};
+  --ion-color-primary-rgb: 238, 157, 43;
+  --ion-color-primary-contrast: #{$background};
+  --ion-background-color: #{$background};
+  --ion-text-color: #{$text};
+  --ion-toolbar-background: #{$background};
+  --ion-toolbar-color: #{$text};
+  --ion-font-family: #{$font};
+  --ion-border-radius: #{$rounded};
+}

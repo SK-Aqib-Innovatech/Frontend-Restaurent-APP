@@ -1,0 +1,7 @@
+{
+  "name": "savor-restaurant-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
