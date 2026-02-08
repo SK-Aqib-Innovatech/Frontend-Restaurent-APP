@@ -37,9 +37,12 @@
 
 .from-background {
   --tw-gradient-from: #{$background};
+  --tw-gradient-to: transparent;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 .via-background\/50 {
   --tw-gradient-via: rgba(#{red($background)}, #{green($background)}, #{blue($background)}, 0.5);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-via), var(--tw-gradient-to);
 }
 .to-transparent {
   --tw-gradient-to: transparent;

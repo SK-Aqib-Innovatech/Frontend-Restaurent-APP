@@ -1,0 +1,27 @@
+@import '../abstracts/variables.scss';
+
+$heights: (0, 1, 12, 16, 20, 24, 32, 36, 42, 48, 56, 64, 90, 320, 360, 512);
+
+@each $height in $heights {
+  .h-#{$height} {
+    height: #{$height}px;
+  }
+  .min-height-#{$height} {
+    min-height: #{$height}px;
+  }
+  .max-height-#{$height} {
+    max-height: #{$height}px;
+  }
+}
+
+.login-height {
+  min-height: $width-logic-web;
+}
+
+.h-0-grow {
+  height: 0px;
+  flex-grow: 1;
+}
+.aspect-ratio-1 {
+  aspect-ratio: 1;
+}

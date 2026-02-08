@@ -1,0 +1,16 @@
+@import '../abstracts/variables.scss';
+$border-radius-values: (4, 8, 10, 12, 14, 16, 18, 20, 24, 32);
+
+@each $value in $border-radius-values {
+  .br#{$value} {
+    border-radius: #{$value}px;
+  }
+  .br-start#{$value} {
+    border-start-start-radius: #{$value}px;
+    border-start-end-radius: #{$value}px;
+  }
+  .br-end#{$value} {
+    border-end-start-radius: #{$value}px;
+    border-end-end-radius: #{$value}px;
+  }
+}

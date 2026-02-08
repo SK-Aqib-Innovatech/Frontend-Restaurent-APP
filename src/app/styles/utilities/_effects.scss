@@ -38,8 +38,14 @@
 .shadow-xl {
   box-shadow: $shadow-xl;
 }
+.shadow-2xl {
+  box-shadow: $shadow-xl;
+}
 .shadow-primary {
   box-shadow: $shadow-primary;
+}
+.shadow-primary\/30 {
+  box-shadow: 0 10px 30px rgba($primary, 0.3);
 }
 
 // Border radius

@@ -17,6 +17,9 @@
 @use 'utilities/display';
 @use 'utilities/effects';
 @use 'utilities/common';
+@use 'utilities/height';
+@use 'utilities/width';
+@use 'utilities/border';
 
 // Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
@@ -119,4 +122,32 @@ ion-content {
 
 .animate-scale-in {
   animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.abs-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }

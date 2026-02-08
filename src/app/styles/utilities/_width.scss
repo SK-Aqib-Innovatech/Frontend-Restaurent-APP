@@ -1,0 +1,13 @@
+$widths: (0, 16, 18, 20, 24, 32, 64, 72, 184, 264, 320, 400, 464);
+
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width}px;
+  }
+  .min-width-#{$width} {
+    min-width: #{$width}px;
+  }
+  .max-width-#{$width} {
+    max-width: #{$width}px;
+  }
+}
