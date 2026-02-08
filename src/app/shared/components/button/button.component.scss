@@ -14,7 +14,7 @@
   transition: all $transition;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  
+
   &:active:not(:disabled) {
     transform: scale(0.98);
   }
@@ -123,6 +123,7 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
-

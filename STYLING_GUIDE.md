@@ -5,6 +5,7 @@
 This project uses a **utility-first approach** where most styling is done using reusable utility classes rather than writing custom CSS for every component.
 
 **Benefits:**
+
 - ✅ Faster development
 - ✅ Consistent design
 - ✅ Smaller CSS bundle
@@ -16,6 +17,7 @@ This project uses a **utility-first approach** where most styling is done using 
 ## Quick Reference
 
 ### Spacing (4px base scale)
+
 ```html
 <!-- Margin -->
 <div class="m-4">All sides</div>
@@ -34,6 +36,7 @@ This project uses a **utility-first approach** where most styling is done using 
 **Scale:** 0, 1 (4px), 2 (8px), 3 (12px), 4 (16px), 5 (20px), 6 (24px), 8 (32px), 10 (40px), 12 (48px), 16 (64px)
 
 ### Typography
+
 ```html
 <!-- Size -->
 <h1 class="text-4xl">36px heading</h1>
@@ -51,6 +54,7 @@ This project uses a **utility-first approach** where most styling is done using 
 ```
 
 ### Layout
+
 ```html
 <!-- Flexbox -->
 <div class="flex items-center justify-between">
@@ -70,6 +74,7 @@ This project uses a **utility-first approach** where most styling is done using 
 ```
 
 ### Visual Effects
+
 ```html
 <!-- Border Radius -->
 <div class="rounded-xl">20px radius</div>
@@ -91,26 +96,29 @@ This project uses a **utility-first approach** where most styling is done using 
 All design tokens are defined in `src/app/styles/abstracts/_variables.scss`
 
 ### Colors
+
 ```scss
-$primary: #ee9d2b;      // Brand orange
-$background: #121212;   // Dark background
-$surface: #1e1e1e;      // Cards
-$text: #ffffff;         // Primary text
-$text-muted: #a1a1a1;   // Secondary text
+$primary: #ee9d2b; // Brand orange
+$background: #121212; // Dark background
+$surface: #1e1e1e; // Cards
+$text: #ffffff; // Primary text
+$text-muted: #a1a1a1; // Secondary text
 ```
 
 ### Spacing
+
 ```scss
 $space-1: 4px;
 $space-2: 8px;
-$space-4: 16px;  // Base
+$space-4: 16px; // Base
 $space-6: 24px;
 $space-8: 32px;
 ```
 
 ### Typography
+
 ```scss
-$text-base: 16px;  // Default
+$text-base: 16px; // Default
 $text-xl: 20px;
 $text-2xl: 24px;
 $text-4xl: 36px;
@@ -121,6 +129,7 @@ $text-4xl: 36px;
 ## When to Use Utilities vs Component Styles
 
 ### ✅ USE UTILITIES for:
+
 - Margin, padding, gap
 - Text size, weight, color
 - Flexbox layout
@@ -130,6 +139,7 @@ $text-4xl: 36px;
 - Common patterns
 
 **Example (Good):**
+
 ```html
 <div class="flex items-center gap-4 p-6 rounded-xl bg-surface">
   <img class="w-12 h-12 rounded-full" src="..." />
@@ -141,19 +151,21 @@ $text-4xl: 36px;
 ```
 
 ### ❌ USE COMPONENT STYLES for:
+
 - Complex animations
 - Pseudo-elements (::before, ::after)
 - Hover/active states that need multiple properties
 - Component-specific behavior
 
 **Example (Component SCSS):**
+
 ```scss
 .dish-card {
   &:hover {
     transform: scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
   }
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -167,6 +179,7 @@ $text-4xl: 36px;
 ## Common Patterns
 
 ### Card Component
+
 ```html
 <div class="p-6 rounded-xl bg-surface border border-white/10">
   <h3 class="text-xl font-bold mb-2">Card Title</h3>
@@ -175,18 +188,16 @@ $text-4xl: 36px;
 ```
 
 ### Button Row
+
 ```html
 <div class="flex gap-3">
-  <button class="flex-1 py-3 rounded-lg bg-primary font-bold">
-    Primary
-  </button>
-  <button class="flex-1 py-3 rounded-lg bg-surface font-bold">
-    Secondary
-  </button>
+  <button class="flex-1 py-3 rounded-lg bg-primary font-bold">Primary</button>
+  <button class="flex-1 py-3 rounded-lg bg-surface font-bold">Secondary</button>
 </div>
 ```
 
 ### Image Card with Overlay
+
 ```html
 <div class="relative rounded-xl overflow-hidden">
   <img src="..." class="w-full h-full object-cover" />
@@ -198,6 +209,7 @@ $text-4xl: 36px;
 ```
 
 ### Centered Content
+
 ```html
 <div class="flex items-center justify-center min-h-screen">
   <div class="text-center">
@@ -232,20 +244,22 @@ src/app/styles/
 ## Best Practices
 
 ### 1. Prefer Utilities Over Custom CSS
+
 ```html
 <!-- ✅ Good - Using utilities -->
 <div class="flex items-center gap-4 p-4 rounded-lg bg-surface">
-
-<!-- ❌ Avoid - Custom class for simple styling -->
-<div class="custom-card">  <!-- where .custom-card just sets flex, padding, etc. -->
+  <!-- ❌ Avoid - Custom class for simple styling -->
+  <div class="custom-card"><!-- where .custom-card just sets flex, padding, etc. --></div>
+</div>
 ```
 
 ### 2. Keep Component SCSS Minimal
+
 ```scss
 // ✅ Good - Only unique component behavior
 .dish-card {
   transition: transform 0.3s;
-  
+
   &:hover {
     transform: scale(1.05);
   }
@@ -253,14 +267,15 @@ src/app/styles/
 
 // ❌ Avoid - Repeating utility-level styles
 .dish-card {
-  display: flex;           // Use class="flex"
-  padding: 16px;           // Use class="p-4"
-  border-radius: 12px;     // Use class="rounded-xl"
-  background: #1e1e1e;     // Use class="bg-surface"
+  display: flex; // Use class="flex"
+  padding: 16px; // Use class="p-4"
+  border-radius: 12px; // Use class="rounded-xl"
+  background: #1e1e1e; // Use class="bg-surface"
 }
 ```
 
 ### 3. Use Semantic Variable Names
+
 ```scss
 // ✅ Good
 background-color: $surface;
@@ -272,6 +287,7 @@ padding: 16px;
 ```
 
 ### 4. Combine Classes Thoughtfully
+
 ```html
 <!-- ✅ Good - Clear, scannable -->
 <div class="flex items-center gap-4">
@@ -280,7 +296,9 @@ padding: 16px;
 </div>
 
 <!-- ❌ Avoid - Too many classes, hard to read -->
-<div class="flex flex-row items-center justify-start gap-4 w-full px-4 py-2 mt-2 mb-4 rounded-lg bg-surface border border-solid border-white/10">
+<div
+  class="flex flex-row items-center justify-start gap-4 w-full px-4 py-2 mt-2 mb-4 rounded-lg bg-surface border border-solid border-white/10"
+></div>
 ```
 
 ---
@@ -288,6 +306,7 @@ padding: 16px;
 ## Examples from the App
 
 ### Welcome Page (Refactored)
+
 Before: 150+ lines of custom SCSS  
 After: ~10 lines of SCSS + utility classes
 
@@ -304,6 +323,7 @@ After: ~10 lines of SCSS + utility classes
 ```
 
 ### Dish Card Component
+
 Uses utilities for layout, custom SCSS only for hover effects:
 
 ```html

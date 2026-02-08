@@ -63,6 +63,7 @@ ionic build --prod
 ### TypeScript Configuration
 
 The project uses strict TypeScript settings:
+
 - Strict mode enabled
 - No implicit any
 - Strict null checks
@@ -71,12 +72,14 @@ The project uses strict TypeScript settings:
 ### SCSS Configuration
 
 Global styles are automatically imported via `angular.json`:
+
 - Main entry: `src/app/styles/main.scss`
 - Include paths configured for easy imports
 
 ### Ionic Configuration
 
 The app is configured with:
+
 - iOS mode for consistent styling
 - Animations enabled
 - Ripple effects enabled
@@ -113,7 +116,7 @@ Edit `src/app/app.routes.ts`:
 ```typescript
 {
   path: 'menu',
-  loadComponent: () => 
+  loadComponent: () =>
     import('./features/menu/pages/menu-list/menu-list.component')
       .then(m => m.MenuListComponent)
 }
@@ -130,9 +133,7 @@ The project includes comprehensive utility classes:
 </div>
 
 <!-- Typography -->
-<h1 class="text-4xl font-bold text-primary leading-tight">
-  Large bold primary-colored title
-</h1>
+<h1 class="text-4xl font-bold text-primary leading-tight">Large bold primary-colored title</h1>
 
 <!-- Layout -->
 <div class="d-flex flex-col items-center gap-md">
@@ -141,9 +142,7 @@ The project includes comprehensive utility classes:
 </div>
 
 <!-- Effects -->
-<div class="rounded-lg shadow-lg transition-all">
-  Card with rounded corners and shadow
-</div>
+<div class="rounded-lg shadow-lg transition-all">Card with rounded corners and shadow</div>
 ```
 
 ## Testing Mobile Devices
@@ -208,21 +207,21 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  styleUrls: ['./example.component.scss'],
 })
 export class ExampleComponent {
   // Properties first
   title = 'Example';
-  
+
   // Constructor
   constructor() {}
-  
+
   // Lifecycle hooks
   ngOnInit(): void {}
-  
+
   // Public methods
   handleClick(): void {}
-  
+
   // Private methods
   private helperMethod(): void {}
 }
@@ -237,44 +236,44 @@ export class ExampleComponent {
 .component-name {
   // Layout properties
   display: flex;
-  
+
   // Positioning
   position: relative;
-  
+
   // Box model
   width: 100%;
   padding: $spacing-md;
-  
+
   // Typography
   font-size: $font-size-base;
-  
+
   // Visual
   background: $background-dark;
   border-radius: $radius-lg;
-  
+
   // Animation
   transition: all $transition-base;
-  
+
   // Pseudo-elements
   &::before {
     content: '';
   }
-  
+
   // Pseudo-classes
   &:hover {
     background: $surface-dark;
   }
-  
+
   // Modifiers (BEM)
   &--variant {
     background: $primary;
   }
-  
+
   // Child elements (BEM)
   &__child {
     margin-top: $spacing-sm;
   }
-  
+
   // Responsive
   @include respond-to('md') {
     padding: $spacing-lg;
@@ -287,6 +286,7 @@ export class ExampleComponent {
 ### Common Issues
 
 **Issue**: Module not found errors
+
 ```bash
 # Clear cache and reinstall
 rm -rf node_modules package-lock.json
@@ -294,12 +294,14 @@ npm install
 ```
 
 **Issue**: SCSS compilation errors
+
 ```bash
 # Verify SCSS syntax
 # Check that all imports use @use instead of @import
 ```
 
 **Issue**: Ionic components not rendering
+
 ```bash
 # Verify Ionic imports
 # Ensure you're importing from @ionic/angular/standalone

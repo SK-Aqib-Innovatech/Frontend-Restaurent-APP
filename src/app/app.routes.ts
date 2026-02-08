@@ -4,12 +4,12 @@ export const routes: Routes = [
   {
     path: '',
     redirectTo: 'welcome',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'welcome',
-    loadComponent: () => 
-      import('./features/auth/pages/welcome/welcome.component').then(m => m.WelcomeComponent)
+    loadComponent: () =>
+      import('./features/auth/pages/welcome/welcome.component').then((m) => m.WelcomeComponent),
   },
   // Add more routes here as you build out the app
   // {
@@ -18,6 +18,6 @@ export const routes: Routes = [
   // },
   {
     path: '**',
-    redirectTo: 'welcome'
-  }
+    redirectTo: 'welcome',
+  },
 ];

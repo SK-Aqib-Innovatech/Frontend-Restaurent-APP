@@ -20,71 +20,49 @@ import { ButtonComponent } from '@shared/components/button/button.component';
 ### Basic Usage
 
 ```html
-<app-button (clicked)="handleClick()">
-  Click Me
-</app-button>
+<app-button (clicked)="handleClick()"> Click Me </app-button>
 ```
 
 ### Variants
 
 ```html
 <!-- Primary (default) -->
-<app-button variant="primary">
-  Primary Button
-</app-button>
+<app-button variant="primary"> Primary Button </app-button>
 
 <!-- Secondary -->
-<app-button variant="secondary">
-  Secondary Button
-</app-button>
+<app-button variant="secondary"> Secondary Button </app-button>
 
 <!-- Ghost -->
-<app-button variant="ghost">
-  Ghost Button
-</app-button>
+<app-button variant="ghost"> Ghost Button </app-button>
 
 <!-- Outline -->
-<app-button variant="outline">
-  Outline Button
-</app-button>
+<app-button variant="outline"> Outline Button </app-button>
 ```
 
 ### Sizes
 
 ```html
 <!-- Small -->
-<app-button size="sm">
-  Small Button
-</app-button>
+<app-button size="sm"> Small Button </app-button>
 
 <!-- Medium (default) -->
-<app-button size="md">
-  Medium Button
-</app-button>
+<app-button size="md"> Medium Button </app-button>
 
 <!-- Large -->
-<app-button size="lg">
-  Large Button
-</app-button>
+<app-button size="lg"> Large Button </app-button>
 ```
 
 ### States
 
 ```html
 <!-- Disabled -->
-<app-button [disabled]="true">
-  Disabled Button
-</app-button>
+<app-button [disabled]="true"> Disabled Button </app-button>
 
 <!-- Loading -->
-<app-button [loading]="isLoading">
-  Submit
-</app-button>
+<app-button [loading]="isLoading"> Submit </app-button>
 
 <!-- Full Width -->
-<app-button [fullWidth]="true">
-  Full Width Button
-</app-button>
+<app-button [fullWidth]="true"> Full Width Button </app-button>
 ```
 
 ### Complete Example
@@ -108,7 +86,7 @@ import { ButtonComponent } from '@shared/components/button/button.component';
     >
       Submit Order
     </app-button>
-  `
+  `,
 })
 export class ExampleComponent {
   isSubmitting = false;
@@ -132,19 +110,19 @@ export class ExampleComponent {
 
 ### Button Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `variant` | `'primary' \| 'secondary' \| 'ghost' \| 'outline'` | `'primary'` | Visual style variant |
-| `size` | `'sm' \| 'md' \| 'lg'` | `'md'` | Button size |
-| `disabled` | `boolean` | `false` | Disable the button |
-| `loading` | `boolean` | `false` | Show loading spinner |
-| `fullWidth` | `boolean` | `false` | Make button full width |
-| `type` | `'button' \| 'submit' \| 'reset'` | `'button'` | HTML button type |
+| Prop        | Type                                               | Default     | Description            |
+| ----------- | -------------------------------------------------- | ----------- | ---------------------- |
+| `variant`   | `'primary' \| 'secondary' \| 'ghost' \| 'outline'` | `'primary'` | Visual style variant   |
+| `size`      | `'sm' \| 'md' \| 'lg'`                             | `'md'`      | Button size            |
+| `disabled`  | `boolean`                                          | `false`     | Disable the button     |
+| `loading`   | `boolean`                                          | `false`     | Show loading spinner   |
+| `fullWidth` | `boolean`                                          | `false`     | Make button full width |
+| `type`      | `'button' \| 'submit' \| 'reset'`                  | `'button'`  | HTML button type       |
 
 ### Button Events
 
-| Event | Payload | Description |
-|-------|---------|-------------|
+| Event     | Payload | Description                    |
+| --------- | ------- | ------------------------------ |
 | `clicked` | `Event` | Emitted when button is clicked |
 
 ---
@@ -167,16 +145,17 @@ import { AuthSocialButtonsComponent, SocialProvider } from '@shared/components/a
 ### Basic Usage
 
 ```html
-<app-auth-social-buttons
-  (socialLogin)="handleSocialLogin($event)"
-></app-auth-social-buttons>
+<app-auth-social-buttons (socialLogin)="handleSocialLogin($event)"></app-auth-social-buttons>
 ```
 
 ### Complete Example
 
 ```typescript
 import { Component } from '@angular/core';
-import { AuthSocialButtonsComponent, SocialProvider } from '@shared/components/auth-social-buttons/auth-social-buttons.component';
+import {
+  AuthSocialButtonsComponent,
+  SocialProvider,
+} from '@shared/components/auth-social-buttons/auth-social-buttons.component';
 
 @Component({
   selector: 'app-login',
@@ -185,21 +164,19 @@ import { AuthSocialButtonsComponent, SocialProvider } from '@shared/components/a
   template: `
     <div class="login-container">
       <h1>Sign In</h1>
-      
+
       <div class="divider">
         <span>Or continue with</span>
       </div>
-      
-      <app-auth-social-buttons
-        (socialLogin)="handleSocialLogin($event)"
-      ></app-auth-social-buttons>
+
+      <app-auth-social-buttons (socialLogin)="handleSocialLogin($event)"></app-auth-social-buttons>
     </div>
-  `
+  `,
 })
 export class LoginComponent {
   handleSocialLogin(provider: SocialProvider): void {
     console.log('Login with:', provider);
-    
+
     switch (provider) {
       case 'google':
         this.loginWithGoogle();
@@ -233,8 +210,8 @@ This component has no input properties.
 
 ### Events
 
-| Event | Payload | Description |
-|-------|---------|-------------|
+| Event         | Payload          | Description                                                                                     |
+| ------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
 | `socialLogin` | `SocialProvider` | Emitted when a social button is clicked. Provider can be `'google'`, `'apple'`, or `'facebook'` |
 
 ---
@@ -246,6 +223,7 @@ This component has no input properties.
 When creating a new component, follow these guidelines:
 
 1. **Make it Standalone**
+
    ```typescript
    @Component({
      standalone: true,
@@ -254,35 +232,38 @@ When creating a new component, follow these guidelines:
    ```
 
 2. **Use Proper Imports**
+
    ```typescript
-   imports: [CommonModule, IonicModule, OtherComponents]
+   imports: [CommonModule, IonicModule, OtherComponents];
    ```
 
 3. **Add Type Safety**
+
    ```typescript
    @Input() variant: 'primary' | 'secondary' = 'primary';
    @Output() clicked = new EventEmitter<void>();
    ```
 
 4. **Use Path Aliases**
+
    ```typescript
    import { Variable } from '@styles/abstracts/variables';
    ```
 
 5. **Follow BEM Naming**
+
    ```scss
    .component-name {
-     &__element { }
-     &--modifier { }
+     &__element {
+     }
+     &--modifier {
+     }
    }
    ```
 
 6. **Add Accessibility**
    ```html
-   <button 
-     aria-label="Close dialog"
-     [attr.aria-expanded]="isOpen"
-   >
+   <button aria-label="Close dialog" [attr.aria-expanded]="isOpen"></button>
    ```
 
 ### Component Template
@@ -296,7 +277,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './my-component.component.html',
-  styleUrls: ['./my-component.component.scss']
+  styleUrls: ['./my-component.component.scss'],
 })
 export class MyComponent {
   @Input() title = '';
@@ -332,18 +313,18 @@ export class MyComponent {
 
 .my-component {
   @include card;
-  
+
   &__header {
     @include flex-between;
     margin-bottom: $spacing-md;
   }
-  
+
   &__title {
     font-size: $font-size-xl;
     font-weight: $font-weight-bold;
     color: $text-primary;
   }
-  
+
   &--highlighted {
     border: 2px solid $primary;
   }
@@ -355,11 +336,11 @@ export class MyComponent {
 ```scss
 .my-component {
   padding: $spacing-md;
-  
+
   @include respond-to('md') {
     padding: $spacing-lg;
   }
-  
+
   @include respond-to('lg') {
     padding: $spacing-xl;
   }
@@ -373,6 +354,7 @@ export class MyComponent {
 ### 1. Component Communication
 
 **Parent to Child (Input)**
+
 ```typescript
 // Parent
 <app-child [data]="parentData"></app-child>
@@ -382,6 +364,7 @@ export class MyComponent {
 ```
 
 **Child to Parent (Output)**
+
 ```typescript
 // Child
 @Output() dataChanged = new EventEmitter<string>();
@@ -424,7 +407,7 @@ describe('MyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MyComponent]
+      imports: [MyComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MyComponent);

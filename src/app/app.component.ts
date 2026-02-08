@@ -9,7 +9,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
     <ion-app>
       <ion-router-outlet></ion-router-outlet>
     </ion-app>
-  `
+  `,
 })
 export class AppComponent {
   constructor() {}

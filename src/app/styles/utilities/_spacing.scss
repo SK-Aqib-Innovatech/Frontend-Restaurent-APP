@@ -8,17 +8,27 @@
 // Spacing scale (maps to variables)
 $spacings: (
   '0': 0,
-  '1': $space-1,    // 4px
-  '2': $space-2,    // 8px
-  '3': $space-3,    // 12px
-  '4': $space-4,    // 16px - base
-  '5': $space-5,    // 20px
-  '6': $space-6,    // 24px
-  '8': $space-8,    // 32px
-  '10': $space-10,  // 40px
-  '12': $space-12,  // 48px
-  '16': $space-16,  // 64px
-  'auto': auto
+  '1': $space-1,
+  // 4px
+  '2': $space-2,
+  // 8px
+  '3': $space-3,
+  // 12px
+  '4': $space-4,
+  // 16px - base
+  '5': $space-5,
+  // 20px
+  '6': $space-6,
+  // 24px
+  '8': $space-8,
+  // 32px
+  '10': $space-10,
+  // 40px
+  '12': $space-12,
+  // 48px
+  '16': $space-16,
+  // 64px
+  'auto': auto,
 );
 
 // --------------------------------------------------------------------------
@@ -27,20 +37,30 @@ $spacings: (
 // --------------------------------------------------------------------------
 @each $key, $value in $spacings {
   // All sides: m-4
-  .m-#{$key} { margin: $value; }
-  
+  .m-#{$key} {
+    margin: $value;
+  }
+
   // Individual sides: mt-4, mr-2, mb-6, ml-8
-  .mt-#{$key} { margin-top: $value; }
-  .mr-#{$key} { margin-right: $value; }
-  .mb-#{$key} { margin-bottom: $value; }
-  .ml-#{$key} { margin-left: $value; }
-  
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
   // Horizontal: mx-4
   .mx-#{$key} {
     margin-left: $value;
     margin-right: $value;
   }
-  
+
   // Vertical: my-4
   .my-#{$key} {
     margin-top: $value;
@@ -54,20 +74,30 @@ $spacings: (
 // --------------------------------------------------------------------------
 @each $key, $value in $spacings {
   // All sides: p-4
-  .p-#{$key} { padding: $value; }
-  
+  .p-#{$key} {
+    padding: $value;
+  }
+
   // Individual sides: pt-4, pr-2, pb-6, pl-8
-  .pt-#{$key} { padding-top: $value; }
-  .pr-#{$key} { padding-right: $value; }
-  .pb-#{$key} { padding-bottom: $value; }
-  .pl-#{$key} { padding-left: $value; }
-  
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
   // Horizontal: px-4
   .px-#{$key} {
     padding-left: $value;
     padding-right: $value;
   }
-  
+
   // Vertical: py-4
   .py-#{$key} {
     padding-top: $value;
@@ -81,9 +111,15 @@ $spacings: (
 // --------------------------------------------------------------------------
 @each $key, $value in $spacings {
   @if $key != 'auto' {
-    .gap-#{$key} { gap: $value; }
-    .gap-x-#{$key} { column-gap: $value; }
-    .gap-y-#{$key} { row-gap: $value; }
+    .gap-#{$key} {
+      gap: $value;
+    }
+    .gap-x-#{$key} {
+      column-gap: $value;
+    }
+    .gap-y-#{$key} {
+      row-gap: $value;
+    }
   }
 }
 
@@ -93,10 +129,20 @@ $spacings: (
 // --------------------------------------------------------------------------
 @each $key, $value in $spacings {
   @if $key != 'auto' and $key != '0' {
-    .-m-#{$key} { margin: -$value; }
-    .-mt-#{$key} { margin-top: -$value; }
-    .-mr-#{$key} { margin-right: -$value; }
-    .-mb-#{$key} { margin-bottom: -$value; }
-    .-ml-#{$key} { margin-left: -$value; }
+    .-m-#{$key} {
+      margin: -$value;
+    }
+    .-mt-#{$key} {
+      margin-top: -$value;
+    }
+    .-mr-#{$key} {
+      margin-right: -$value;
+    }
+    .-mb-#{$key} {
+      margin-bottom: -$value;
+    }
+    .-ml-#{$key} {
+      margin-left: -$value;
+    }
   }
 }

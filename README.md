@@ -146,6 +146,7 @@ import { WelcomeComponent } from '@features/auth/pages/welcome/welcome.component
 ## 🎯 Best Practices Implemented
 
 ### Angular Best Practices
+
 - ✅ Standalone components
 - ✅ Lazy loading routes
 - ✅ Strict TypeScript configuration
@@ -154,6 +155,7 @@ import { WelcomeComponent } from '@features/auth/pages/welcome/welcome.component
 - ✅ RxJS for async operations
 
 ### Ionic Best Practices
+
 - ✅ Ionic standalone components
 - ✅ iOS mode for consistent styling
 - ✅ Safe area handling for notched devices
@@ -161,6 +163,7 @@ import { WelcomeComponent } from '@features/auth/pages/welcome/welcome.component
 - ✅ Proper use of Ionic lifecycle hooks
 
 ### SCSS Best Practices
+
 - ✅ Modular structure (7-1 pattern inspired)
 - ✅ BEM naming convention for components
 - ✅ Design tokens (CSS variables + SCSS variables)

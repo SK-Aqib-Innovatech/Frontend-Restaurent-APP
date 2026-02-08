@@ -9,7 +9,7 @@ export const appConfig: ApplicationConfig = {
     provideIonicAngular({
       mode: 'ios', // Use iOS mode for consistent styling
       animated: true,
-      rippleEffect: true
-    })
-  ]
+      rippleEffect: true,
+    }),
+  ],
 };

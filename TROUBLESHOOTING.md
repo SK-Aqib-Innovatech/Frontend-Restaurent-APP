@@ -7,16 +7,19 @@ This guide addresses common issues you might encounter when setting up the Savor
 The following issues have been resolved in the latest archive:
 
 ### 1. ✅ SCSS @use Rules Error
+
 **Error**: `@use rules must be written before any other rules`
 
 **Fixed**: The `main.scss` file now has `@use` rules before `@import` statements.
 
 ### 2. ✅ Empty Directories
+
 **Issue**: Some directories were empty and not preserved in the archive
 
 **Fixed**: Added `.gitkeep` files to all empty directories so they're preserved.
 
 ### 3. ✅ Ionic Import Paths
+
 **Issue**: Using `~@ionic/angular/css/...` syntax
 
 **Fixed**: Updated to use `@ionic/angular/css/...` (without tilde)
@@ -28,6 +31,7 @@ The following issues have been resolved in the latest archive:
 ### Issue: "Module not found" errors
 
 If you see errors like:
+
 ```
 Error: Can't resolve '../../../shared/components/button/button.component'
 ```
@@ -35,21 +39,25 @@ Error: Can't resolve '../../../shared/components/button/button.component'
 **Solutions**:
 
 1. **Verify all files were extracted**:
+
    ```bash
    ls -la src/app/shared/components/button/
    ```
+
    You should see:
    - `button.component.ts`
    - `button.component.html`
    - `button.component.scss`
 
 2. **Clear the Angular cache**:
+
    ```bash
    rm -rf .angular
    rm -rf node_modules/.cache
    ```
 
 3. **Reinstall dependencies**:
+
    ```bash
    rm -rf node_modules package-lock.json
    npm install
@@ -67,9 +75,10 @@ Error: Can't resolve '../../../shared/components/button/button.component'
 If you see SCSS-related errors:
 
 **Solution 1** - Verify SCSS file order in `main.scss`:
+
 ```scss
 // ✅ CORRECT ORDER:
-@use 'abstracts/variables';  // @use FIRST
+@use 'abstracts/variables'; // @use FIRST
 @use 'abstracts/mixins';
 
 // Then @import
@@ -78,6 +87,7 @@ If you see SCSS-related errors:
 ```
 
 **Solution 2** - Check SCSS syntax in components:
+
 ```scss
 // ✅ CORRECT:
 @use '../../../styles/abstracts/variables' as *;
@@ -94,6 +104,7 @@ If you see SCSS-related errors:
 If TypeScript can't find modules using `@core`, `@shared`, etc.:
 
 **Solution** - Verify `tsconfig.json` has path mappings:
+
 ```json
 {
   "compilerOptions": {
@@ -116,6 +127,7 @@ Then restart your IDE/editor.
 If Ionic components show errors or don't render:
 
 **Solution 1** - Check imports are from standalone:
+
 ```typescript
 // ✅ CORRECT:
 import { IonContent } from '@ionic/angular/standalone';
@@ -125,6 +137,7 @@ import { IonContent } from '@ionic/angular';
 ```
 
 **Solution 2** - Verify component imports:
+
 ```typescript
 @Component({
   imports: [
@@ -143,11 +156,13 @@ import { IonContent } from '@ionic/angular';
 **Solutions**:
 
 1. **Use correct Node.js version**:
+
    ```bash
    node --version  # Should be 18.x or 20.x
    ```
 
 2. **Clear npm cache**:
+
    ```bash
    npm cache clean --force
    rm -rf node_modules package-lock.json
@@ -164,6 +179,7 @@ import { IonContent } from '@ionic/angular';
 ### Issue: Port 4200 already in use
 
 **Solution**:
+
 ```bash
 # Kill process on port 4200
 lsof -ti:4200 | xargs kill -9
@@ -179,11 +195,13 @@ ng serve --port 4300
 The initial build shows large bundle sizes - this is normal for development.
 
 **For production**, run:
+
 ```bash
 npm run build --configuration=production
 ```
 
 This will:
+
 - Tree-shake unused code
 - Minify JavaScript
 - Optimize bundles
@@ -198,7 +216,6 @@ After extracting and installing, verify:
 - [ ] All component files exist:
   - `src/app/shared/components/button/*`
   - `src/app/shared/components/auth-social-buttons/*`
-  
 - [ ] All style files exist:
   - `src/app/styles/abstracts/_variables.scss`
   - `src/app/styles/abstracts/_mixins.scss`
@@ -216,6 +233,7 @@ After extracting and installing, verify:
   - `ionic.config.json`
 
 - [ ] Dependencies installed:
+
   ```bash
   ls node_modules/@angular
   ls node_modules/@ionic
@@ -259,6 +277,7 @@ npm start
 ## Still Having Issues?
 
 ### Check versions:
+
 ```bash
 node --version    # Should be 18.x or 20.x
 npm --version     # Should be 9.x or higher
@@ -267,16 +286,19 @@ ionic --version   # Should be 7.x
 ```
 
 ### Enable verbose logging:
+
 ```bash
 npm start -- --verbose
 ```
 
 ### Check file structure:
+
 ```bash
 tree -L 3 src/app/
 ```
 
 ### Validate TypeScript:
+
 ```bash
 npx tsc --noEmit
 ```
@@ -285,14 +307,14 @@ npx tsc --noEmit
 
 ## Quick Fixes Summary
 
-| Issue | Quick Fix |
-|-------|-----------|
-| Module not found | `rm -rf node_modules && npm install` |
-| SCSS errors | Check `@use` comes before `@import` in `main.scss` |
-| Path alias errors | Restart IDE after checking `tsconfig.json` |
-| Port in use | `lsof -ti:4200 \| xargs kill -9` |
-| Ionic errors | Import from `@ionic/angular/standalone` |
-| Cache issues | `rm -rf .angular node_modules/.cache` |
+| Issue             | Quick Fix                                          |
+| ----------------- | -------------------------------------------------- |
+| Module not found  | `rm -rf node_modules && npm install`               |
+| SCSS errors       | Check `@use` comes before `@import` in `main.scss` |
+| Path alias errors | Restart IDE after checking `tsconfig.json`         |
+| Port in use       | `lsof -ti:4200 \| xargs kill -9`                   |
+| Ionic errors      | Import from `@ionic/angular/standalone`            |
+| Cache issues      | `rm -rf .angular node_modules/.cache`              |
 
 ---
 
@@ -301,12 +323,14 @@ npx tsc --noEmit
 When everything is working correctly, you should see:
 
 ✅ **Terminal output**:
+
 ```
 ✔ Browser application bundle generation complete.
 ** Angular Live Development Server is listening on localhost:4200 **
 ```
 
 ✅ **Browser**:
+
 - Welcome page loads at `http://localhost:4200`
 - Beautiful hero image displays
 - Buttons are styled correctly
@@ -314,6 +338,7 @@ When everything is working correctly, you should see:
 - No console errors
 
 ✅ **Features working**:
+
 - Smooth animations
 - Responsive layout
 - Hover effects on buttons
@@ -322,6 +347,7 @@ When everything is working correctly, you should see:
 ---
 
 Need more help? Check:
+
 - README.md for project overview
 - SETUP_GUIDE.md for detailed setup
 - COMPONENT_GUIDE.md for component usage

@@ -1,379 +1,379 @@
 // _effects.scss - Visual Effects Utility Classes
 
-@use "../abstracts/variables" as *;
+@use '../abstracts/variables' as *;
 
 // Opacity
 .opacity-0 {
-    opacity: 0;
+  opacity: 0;
 }
 .opacity-25 {
-    opacity: 0.25;
+  opacity: 0.25;
 }
 .opacity-50 {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 .opacity-75 {
-    opacity: 0.75;
+  opacity: 0.75;
 }
 .opacity-100 {
-    opacity: 1;
+  opacity: 1;
 }
 
 // Box shadow
 .shadow-none {
-    box-shadow: none;
+  box-shadow: none;
 }
 .shadow-sm {
-    box-shadow: $shadow-sm;
+  box-shadow: $shadow-sm;
 }
 .shadow {
-    box-shadow: $shadow;
+  box-shadow: $shadow;
 }
 .shadow-md {
-    box-shadow: $shadow;
+  box-shadow: $shadow;
 }
 .shadow-lg {
-    box-shadow: $shadow-lg;
+  box-shadow: $shadow-lg;
 }
 .shadow-xl {
-    box-shadow: $shadow-xl;
+  box-shadow: $shadow-xl;
 }
 .shadow-primary {
-    box-shadow: $shadow-primary;
+  box-shadow: $shadow-primary;
 }
 
 // Border radius
 .rounded-none {
-    border-radius: 0;
+  border-radius: 0;
 }
 .rounded-sm {
-    border-radius: $rounded-sm;
+  border-radius: $rounded-sm;
 }
 .rounded {
-    border-radius: $rounded;
+  border-radius: $rounded;
 }
 .rounded-md {
-    border-radius: $rounded;
+  border-radius: $rounded;
 }
 .rounded-lg {
-    border-radius: $rounded-lg;
+  border-radius: $rounded-lg;
 }
 .rounded-xl {
-    border-radius: $rounded-xl;
+  border-radius: $rounded-xl;
 }
 .rounded-full {
-    border-radius: $rounded-full;
+  border-radius: $rounded-full;
 }
 
 // Border radius by side
 .rounded-t-none {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .rounded-r-none {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .rounded-b-none {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .rounded-l-none {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .rounded-t-sm {
-    border-top-left-radius: $rounded-sm;
-    border-top-right-radius: $rounded-sm;
+  border-top-left-radius: $rounded-sm;
+  border-top-right-radius: $rounded-sm;
 }
 .rounded-r-sm {
-    border-top-right-radius: $rounded-sm;
-    border-bottom-right-radius: $rounded-sm;
+  border-top-right-radius: $rounded-sm;
+  border-bottom-right-radius: $rounded-sm;
 }
 .rounded-b-sm {
-    border-bottom-right-radius: $rounded-sm;
-    border-bottom-left-radius: $rounded-sm;
+  border-bottom-right-radius: $rounded-sm;
+  border-bottom-left-radius: $rounded-sm;
 }
 .rounded-l-sm {
-    border-top-left-radius: $rounded-sm;
-    border-bottom-left-radius: $rounded-sm;
+  border-top-left-radius: $rounded-sm;
+  border-bottom-left-radius: $rounded-sm;
 }
 
 .rounded-t {
-    border-top-left-radius: $rounded;
-    border-top-right-radius: $rounded;
+  border-top-left-radius: $rounded;
+  border-top-right-radius: $rounded;
 }
 .rounded-r {
-    border-top-right-radius: $rounded;
-    border-bottom-right-radius: $rounded;
+  border-top-right-radius: $rounded;
+  border-bottom-right-radius: $rounded;
 }
 .rounded-b {
-    border-bottom-right-radius: $rounded;
-    border-bottom-left-radius: $rounded;
+  border-bottom-right-radius: $rounded;
+  border-bottom-left-radius: $rounded;
 }
 .rounded-l {
-    border-top-left-radius: $rounded;
-    border-bottom-left-radius: $rounded;
+  border-top-left-radius: $rounded;
+  border-bottom-left-radius: $rounded;
 }
 
 .rounded-t-lg {
-    border-top-left-radius: $rounded-lg;
-    border-top-right-radius: $rounded-lg;
+  border-top-left-radius: $rounded-lg;
+  border-top-right-radius: $rounded-lg;
 }
 .rounded-r-lg {
-    border-top-right-radius: $rounded-lg;
-    border-bottom-right-radius: $rounded-lg;
+  border-top-right-radius: $rounded-lg;
+  border-bottom-right-radius: $rounded-lg;
 }
 .rounded-b-lg {
-    border-bottom-right-radius: $rounded-lg;
-    border-bottom-left-radius: $rounded-lg;
+  border-bottom-right-radius: $rounded-lg;
+  border-bottom-left-radius: $rounded-lg;
 }
 .rounded-l-lg {
-    border-top-left-radius: $rounded-lg;
-    border-bottom-left-radius: $rounded-lg;
+  border-top-left-radius: $rounded-lg;
+  border-bottom-left-radius: $rounded-lg;
 }
 
 .rounded-t-xl {
-    border-top-left-radius: $rounded-xl;
-    border-top-right-radius: $rounded-xl;
+  border-top-left-radius: $rounded-xl;
+  border-top-right-radius: $rounded-xl;
 }
 .rounded-r-xl {
-    border-top-right-radius: $rounded-xl;
-    border-bottom-right-radius: $rounded-xl;
+  border-top-right-radius: $rounded-xl;
+  border-bottom-right-radius: $rounded-xl;
 }
 .rounded-b-xl {
-    border-bottom-right-radius: $rounded-xl;
-    border-bottom-left-radius: $rounded-xl;
+  border-bottom-right-radius: $rounded-xl;
+  border-bottom-left-radius: $rounded-xl;
 }
 .rounded-l-xl {
-    border-top-left-radius: $rounded-xl;
-    border-bottom-left-radius: $rounded-xl;
+  border-top-left-radius: $rounded-xl;
+  border-bottom-left-radius: $rounded-xl;
 }
 
 // Borders
 .border-0 {
-    border-width: 0;
+  border-width: 0;
 }
 .border {
-    border-width: 1px;
+  border-width: 1px;
 }
 .border-2 {
-    border-width: 2px;
+  border-width: 2px;
 }
 .border-4 {
-    border-width: 4px;
+  border-width: 4px;
 }
 
 .border-t-0 {
-    border-top-width: 0;
+  border-top-width: 0;
 }
 .border-r-0 {
-    border-right-width: 0;
+  border-right-width: 0;
 }
 .border-b-0 {
-    border-bottom-width: 0;
+  border-bottom-width: 0;
 }
 .border-l-0 {
-    border-left-width: 0;
+  border-left-width: 0;
 }
 
 .border-t {
-    border-top-width: 1px;
+  border-top-width: 1px;
 }
 .border-r {
-    border-right-width: 1px;
+  border-right-width: 1px;
 }
 .border-b {
-    border-bottom-width: 1px;
+  border-bottom-width: 1px;
 }
 .border-l {
-    border-left-width: 1px;
+  border-left-width: 1px;
 }
 
 // Border colors
 .border-transparent {
-    border-color: transparent;
+  border-color: transparent;
 }
 .border-current {
-    border-color: currentColor;
+  border-color: currentColor;
 }
 .border-primary {
-    border-color: $primary;
+  border-color: $primary;
 }
 .border-white {
-    border-color: #ffffff;
+  border-color: #ffffff;
 }
 .border-light {
-    border-color: $border;
+  border-color: $border;
 }
 
 // Border style
 .border-solid {
-    border-style: solid;
+  border-style: solid;
 }
 .border-dashed {
-    border-style: dashed;
+  border-style: dashed;
 }
 .border-dotted {
-    border-style: dotted;
+  border-style: dotted;
 }
 .border-none {
-    border-style: none;
+  border-style: none;
 }
 
 // Backdrop blur
 .backdrop-blur-none {
-    backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
 }
 .backdrop-blur-sm {
-    backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 .backdrop-blur {
-    backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 .backdrop-blur-md {
-    backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 .backdrop-blur-lg {
-    backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 .backdrop-blur-xl {
-    backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
 }
 
 // Cursor
 .cursor-auto {
-    cursor: auto;
+  cursor: auto;
 }
 .cursor-default {
-    cursor: default;
+  cursor: default;
 }
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 .cursor-wait {
-    cursor: wait;
+  cursor: wait;
 }
 .cursor-text {
-    cursor: text;
+  cursor: text;
 }
 .cursor-move {
-    cursor: move;
+  cursor: move;
 }
 .cursor-not-allowed {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 // Pointer events
 .pointer-events-none {
-    pointer-events: none;
+  pointer-events: none;
 }
 .pointer-events-auto {
-    pointer-events: auto;
+  pointer-events: auto;
 }
 
 // User select
 .select-none {
-    user-select: none;
+  user-select: none;
 }
 .select-text {
-    user-select: text;
+  user-select: text;
 }
 .select-all {
-    user-select: all;
+  user-select: all;
 }
 .select-auto {
-    user-select: auto;
+  user-select: auto;
 }
 
 // Transitions
 .transition-none {
-    transition: none;
+  transition: none;
 }
 .transition-all {
-    transition: all $transition;
+  transition: all $transition;
 }
 .transition-colors {
-    transition:
-        background-color $transition,
-        border-color $transition,
-        color $transition;
+  transition:
+    background-color $transition,
+    border-color $transition,
+    color $transition;
 }
 .transition-opacity {
-    transition: opacity $transition;
+  transition: opacity $transition;
 }
 .transition-shadow {
-    transition: box-shadow $transition;
+  transition: box-shadow $transition;
 }
 .transition-transform {
-    transition: transform $transition;
+  transition: transform $transition;
 }
 
 // Transition duration
 .duration-fast {
-    transition-duration: $transition-fast;
+  transition-duration: $transition-fast;
 }
 .duration-base {
-    transition-duration: $transition;
+  transition-duration: $transition;
 }
 .duration-slow {
-    transition-duration: $transition-slow;
+  transition-duration: $transition-slow;
 }
 
 // Transform origin
 .origin-center {
-    transform-origin: center;
+  transform-origin: center;
 }
 .origin-top {
-    transform-origin: top;
+  transform-origin: top;
 }
 .origin-right {
-    transform-origin: right;
+  transform-origin: right;
 }
 .origin-bottom {
-    transform-origin: bottom;
+  transform-origin: bottom;
 }
 .origin-left {
-    transform-origin: left;
+  transform-origin: left;
 }
 
 // Scale
 .scale-0 {
-    transform: scale(0);
+  transform: scale(0);
 }
 .scale-50 {
-    transform: scale(0.5);
+  transform: scale(0.5);
 }
 .scale-75 {
-    transform: scale(0.75);
+  transform: scale(0.75);
 }
 .scale-90 {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 .scale-95 {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 .scale-100 {
-    transform: scale(1);
+  transform: scale(1);
 }
 .scale-105 {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .scale-110 {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 .scale-125 {
-    transform: scale(1.25);
+  transform: scale(1.25);
 }
 .scale-150 {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 // Visibility
 .visible {
-    visibility: visible;
+  visibility: visible;
 }
 .invisible {
-    visibility: hidden;
+  visibility: hidden;
 }

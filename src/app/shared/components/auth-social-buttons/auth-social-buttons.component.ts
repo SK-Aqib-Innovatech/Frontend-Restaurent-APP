@@ -8,7 +8,7 @@ export type SocialProvider = 'google' | 'apple' | 'facebook';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './auth-social-buttons.component.html',
-  styleUrls: ['./auth-social-buttons.component.scss']
+  styleUrls: ['./auth-social-buttons.component.scss'],
 })
 export class AuthSocialButtonsComponent {
   @Output() socialLogin = new EventEmitter<SocialProvider>();

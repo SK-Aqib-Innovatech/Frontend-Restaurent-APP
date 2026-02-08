@@ -23,7 +23,7 @@ export interface DishCard {
   standalone: true,
   imports: [CommonModule, RatingBadgeComponent],
   templateUrl: './dish-card.component.html',
-  styleUrls: ['./dish-card.component.scss']
+  styleUrls: ['./dish-card.component.scss'],
 })
 export class DishCardComponent {
   @Input() dish!: DishCard;
@@ -41,13 +41,13 @@ export class DishCardComponent {
 
   getBadgeClass(): string {
     if (!this.dish.badge) return '';
-    
+
     const colorMap = {
       primary: 'bg-primary',
       green: 'bg-emerald-600',
-      orange: 'bg-orange-500'
+      orange: 'bg-orange-500',
     };
-    
+
     return colorMap[this.dish.badge.color] || 'bg-primary';
   }
 }

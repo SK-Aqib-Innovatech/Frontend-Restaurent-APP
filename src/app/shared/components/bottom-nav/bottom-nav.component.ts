@@ -14,7 +14,7 @@ export interface NavItem {
   standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './bottom-nav.component.html',
-  styleUrls: ['./bottom-nav.component.scss']
+  styleUrls: ['./bottom-nav.component.scss'],
 })
 export class BottomNavComponent {
   @Input() items: NavItem[] = [];

@@ -8,15 +8,21 @@
 // RESPONSIVE BREAKPOINTS
 // --------------------------------------------------------------------------
 @mixin mobile {
-  @media (max-width: 767px) { @content; }
+  @media (max-width: 767px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-  @media (min-width: 768px) { @content; }
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-  @media (min-width: 1024px) { @content; }
+  @media (min-width: 1024px) {
+    @content;
+  }
 }
 
 // --------------------------------------------------------------------------
@@ -52,7 +58,7 @@
 @mixin hide-scrollbar {
   scrollbar-width: none; // Firefox
   -ms-overflow-style: none; // IE
-  
+
   &::-webkit-scrollbar {
     display: none; // Chrome, Safari
   }

@@ -3,12 +3,14 @@
 ## 🚀 Get Started in 3 Steps
 
 ### 1. Install Dependencies
+
 ```bash
 cd savor-restaurant-app
 npm install
 ```
 
 ### 2. Run the App
+
 ```bash
 # Start development server
 npm start
@@ -18,9 +20,11 @@ ionic serve
 ```
 
 ### 3. Open Browser
+
 Navigate to: `http://localhost:8100`
 
 You should see the **Welcome Page** with:
+
 - Beautiful hero image with restaurant icon
 - "Log In" and "Create Account" buttons
 - Social login options (Google, Apple, Facebook)
@@ -33,11 +37,13 @@ You should see the **Welcome Page** with:
 ### What's Included
 
 ✅ **Complete Angular 18 LTS + Ionic Setup**
+
 - Modern standalone components
 - TypeScript with strict mode
 - Path aliases configured (@core, @shared, @features)
 
 ✅ **Global Styling System**
+
 - `_spacing.scss` - Margin/padding utilities (`.m-*`, `.p-*`)
 - `_typography.scss` - Text utilities (`.text-*`, `.font-*`)
 - `_display.scss` - Layout utilities (`.d-flex`, `.items-center`)
@@ -46,11 +52,13 @@ You should see the **Welcome Page** with:
 - `_mixins.scss` - Reusable patterns
 
 ✅ **Reusable Components**
+
 - Button component (4 variants, 3 sizes, loading state)
 - Auth social buttons component
 - All following Ionic + Angular best practices
 
 ✅ **Welcome Page**
+
 - Fully implemented and styled
 - Responsive design
 - Smooth animations
@@ -81,12 +89,7 @@ Use anywhere in your HTML:
 ### 2. Reusable Button
 
 ```html
-<app-button 
-  variant="primary" 
-  size="lg" 
-  [fullWidth]="true"
-  (clicked)="handleClick()"
->
+<app-button variant="primary" size="lg" [fullWidth]="true" (clicked)="handleClick()">
   Click Me
 </app-button>
 ```
@@ -120,11 +123,13 @@ src/app/
 ### 1. Add More Pages
 
 Create a menu page:
+
 ```bash
 ng generate component features/menu/pages/menu-list --standalone
 ```
 
 Create a login page:
+
 ```bash
 ng generate component features/auth/pages/login --standalone
 ```
@@ -132,6 +137,7 @@ ng generate component features/auth/pages/login --standalone
 ### 2. Add Services
 
 Create an auth service:
+
 ```bash
 ng generate service core/services/auth
 ```
@@ -139,16 +145,18 @@ ng generate service core/services/auth
 ### 3. Implement Navigation
 
 Update `app.routes.ts`:
+
 ```typescript
 {
   path: 'menu',
-  loadComponent: () => 
+  loadComponent: () =>
     import('./features/menu/pages/menu-list/menu-list.component')
       .then(m => m.MenuListComponent)
 }
 ```
 
 Update button clicks in `welcome.component.ts`:
+
 ```typescript
 onLogin(): void {
   this.router.navigate(['/auth/login']);
@@ -158,11 +166,13 @@ onLogin(): void {
 ### 4. Add State Management (Optional)
 
 For complex apps:
+
 ```bash
 npm install @ngrx/store @ngrx/effects
 ```
 
 Or use Angular Signals (built-in):
+
 ```typescript
 import { signal, computed } from '@angular/core';
 
@@ -186,6 +196,7 @@ const doubled = computed(() => count() * 2);
 ### Change Colors
 
 Edit `src/app/styles/abstracts/_variables.scss`:
+
 ```scss
 $primary: #your-color;
 $background-dark: #your-bg-color;
@@ -194,6 +205,7 @@ $background-dark: #your-bg-color;
 ### Add New Utility Classes
 
 Edit files in `src/app/styles/utilities/`:
+
 - Spacing utilities → `_spacing.scss`
 - Typography → `_typography.scss`
 - Layout → `_display.scss`
@@ -202,6 +214,7 @@ Edit files in `src/app/styles/utilities/`:
 ### Modify Components
 
 Component styles are scoped to each component:
+
 - `button.component.scss`
 - `auth-social-buttons.component.scss`
 - `welcome.component.scss`
@@ -237,16 +250,19 @@ npm test                   # Run tests
 ## 🐛 Troubleshooting
 
 **Q: Can't find module errors?**
+
 ```bash
 rm -rf node_modules package-lock.json
 npm install
 ```
 
 **Q: SCSS errors?**
+
 - Check imports use `@use` not `@import`
 - Verify path aliases in `tsconfig.json`
 
 **Q: Ionic components not working?**
+
 - Import from `@ionic/angular/standalone`
 - Add to component imports array
 
@@ -276,21 +292,26 @@ The app follows modern design principles:
 ## 💡 Pro Tips
 
 1. **Use path aliases** for cleaner imports:
+
    ```typescript
    import { X } from '@shared/components/x';
    import { Y } from '@core/services/y';
    ```
 
 2. **Combine utility classes** instead of writing custom CSS:
+
    ```html
-   <div class="d-flex items-center gap-md p-lg rounded-lg">
+   <div class="d-flex items-center gap-md p-lg rounded-lg"></div>
    ```
 
 3. **Follow BEM naming** for component styles:
+
    ```scss
    .component {
-     &__element { }
-     &--modifier { }
+     &__element {
+     }
+     &--modifier {
+     }
    }
    ```
 

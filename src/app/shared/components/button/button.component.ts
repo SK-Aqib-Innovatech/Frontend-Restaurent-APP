@@ -10,7 +10,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
   standalone: true,
   imports: [CommonModule, IonButton, IonRippleEffect],
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
   @Input() variant: ButtonVariant = 'primary';
@@ -19,22 +19,22 @@ export class ButtonComponent {
   @Input() fullWidth = false;
   @Input() loading = false;
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
-  
+
   @Output() clicked = new EventEmitter<Event>();
 
   get buttonClasses(): string {
     const classes = ['app-button'];
     classes.push(`app-button--${this.variant}`);
     classes.push(`app-button--${this.size}`);
-    
+
     if (this.fullWidth) {
       classes.push('app-button--full-width');
     }
-    
+
     if (this.loading) {
       classes.push('app-button--loading');
     }
-    
+
     return classes.join(' ');
   }
 
