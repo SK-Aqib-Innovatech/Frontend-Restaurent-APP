@@ -9,7 +9,10 @@
 @use 'base/reset';
 
 // Utilities - Utility classes
-@use 'utilities/spacing';
+@use 'utilities/margin';
+@use 'utilities/padding';
+@use 'utilities/gap';
+@use 'utilities/flex';
 @use 'utilities/typography';
 @use 'utilities/display';
 @use 'utilities/effects';

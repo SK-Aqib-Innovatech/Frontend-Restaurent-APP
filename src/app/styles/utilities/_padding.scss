@@ -1,0 +1,39 @@
+// ==========================================================================
+// PADDING UTILITIES
+// Usage: p-4, pt-2, px-6, py-8
+// ==========================================================================
+
+@use './spacing-scale' as *;
+
+@each $key, $value in $spacings {
+  // All sides: p-4
+  .p-#{$key} {
+    padding: $value;
+  }
+
+  // Individual sides: pt-4, pr-2, pb-6, pl-8
+  .pt-#{$key} {
+    padding-top: $value;
+  }
+  .pr-#{$key} {
+    padding-right: $value;
+  }
+  .pb-#{$key} {
+    padding-bottom: $value;
+  }
+  .pl-#{$key} {
+    padding-left: $value;
+  }
+
+  // Horizontal: px-4
+  .px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  // Vertical: py-4
+  .py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}

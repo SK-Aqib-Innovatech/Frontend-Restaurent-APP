@@ -1,0 +1,63 @@
+// ==========================================================================
+// MARGIN UTILITIES
+// Usage: m-4, mt-2, mx-6, my-8
+// ==========================================================================
+
+@use './spacing-scale' as *;
+
+@each $key, $value in $spacings {
+  // All sides: m-4
+  .m-#{$key} {
+    margin: $value;
+  }
+
+  // Individual sides: mt-4, mr-2, mb-6, ml-8
+  .mt-#{$key} {
+    margin-top: $value;
+  }
+  .mr-#{$key} {
+    margin-right: $value;
+  }
+  .mb-#{$key} {
+    margin-bottom: $value;
+  }
+  .ml-#{$key} {
+    margin-left: $value;
+  }
+
+  // Horizontal: mx-4
+  .mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  // Vertical: my-4
+  .my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+}
+
+// --------------------------------------------------------------------------
+// NEGATIVE MARGINS (useful for overlapping layouts)
+// Usage: -mt-4, -ml-6
+// --------------------------------------------------------------------------
+@each $key, $value in $spacings {
+  @if $key != 'auto' and $key != '0' {
+    .-m-#{$key} {
+      margin: -$value;
+    }
+    .-mt-#{$key} {
+      margin-top: -$value;
+    }
+    .-mr-#{$key} {
+      margin-right: -$value;
+    }
+    .-mb-#{$key} {
+      margin-bottom: -$value;
+    }
+    .-ml-#{$key} {
+      margin-left: -$value;
+    }
+  }
+}

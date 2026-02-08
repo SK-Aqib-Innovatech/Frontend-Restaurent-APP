@@ -1,0 +1,20 @@
+// ==========================================================================
+// GAP UTILITIES (for flex/grid)
+// Usage: gap-4, gap-x-2, gap-y-6
+// ==========================================================================
+
+@use './spacing-scale' as *;
+
+@each $key, $value in $spacings {
+  @if $key != 'auto' {
+    .gap-#{$key} {
+      gap: $value;
+    }
+    .gap-x-#{$key} {
+      column-gap: $value;
+    }
+    .gap-y-#{$key} {
+      row-gap: $value;
+    }
+  }
+}
