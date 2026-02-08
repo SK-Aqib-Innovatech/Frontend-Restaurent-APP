@@ -1,0 +1,6 @@
+// Dish Detail Page - Using Utilities
+@use '../../../../styles/abstracts/variables' as *;
+
+ion-content {
+  --background: #{$background};
+}

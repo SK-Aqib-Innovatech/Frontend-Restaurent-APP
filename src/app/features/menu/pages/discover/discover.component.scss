@@ -1,0 +1,12 @@
+// Discover Page - Using Utilities
+@use '../../../../styles/abstracts/variables' as *;
+@use '../../../../styles/abstracts/mixins' as *;
+
+ion-content {
+  --background: #{$background};
+}
+
+// Hide scrollbar for categories
+.hide-scrollbar {
+  @include hide-scrollbar;
+}
