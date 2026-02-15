@@ -17,6 +17,11 @@ export const routes: Routes = [
   //   loadComponent: () => import('./features/home/home.component').then(m => m.HomeComponent)
   // },
   {
+    path: 'profile',
+    loadComponent: () =>
+      import('./features/profile/pages/profile/profile.component').then((m) => m.ProfileComponent),
+  },
+  {
     path: '**',
     redirectTo: 'welcome',
   },

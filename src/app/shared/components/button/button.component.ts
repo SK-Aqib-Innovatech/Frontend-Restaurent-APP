@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonButton, IonRippleEffect } from '@ionic/angular/standalone';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline';
-export type ButtonSize = 'sm' | 'md' | 'lg';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'outline' | 'danger';
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'icon';
 
 @Component({
   selector: 'app-button',
@@ -19,6 +19,7 @@ export class ButtonComponent {
   @Input() fullWidth = false;
   @Input() loading = false;
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
+  @Input() ariaLabel?: string;
 
   @Output() clicked = new EventEmitter<Event>();
 

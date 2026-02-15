@@ -1,0 +1,39 @@
+<div class="px-6 pt-4 pb-8 d-flex flex-col items-center">
+  <!-- Avatar with Gradient Ring -->
+  <div class="relative">
+    <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-primary to-orange-300">
+      <div
+        class="w-full h-full rounded-full bg-cover bg-center border-4 border-background"
+        [style.background-image]="'url(' + user.avatar + ')'"
+      ></div>
+    </div>
+
+    <!-- Edit Button -->
+    <button
+      (click)="edit.emit()"
+      class="absolute bottom-0 right-0 bg-primary p-2 rounded-full border-2 border-background"
+    >
+      <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- User Info -->
+    <h2 class="text-2xl mt-4 font-bold">{{ user.name }}</h2>
+    <p class="text-sm text-muted">{{ user.email }}</p>
+
+  <!-- Membership Badge -->
+  <button
+    class="mt-6 w-full max-w-xs bg-primary text-background font-bold py-3 rounded-xl shadow-lg shadow-primary/20 d-flex items-center justify-center gap-2"
+  >
+    <span>{{ user.membershipLevel }}</span>
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82L8.6 22.5l3.4-1.47 3.4 1.46 1.89-3.19 3.61-.82-.34-3.69L23 12z"
+      />
+    </svg>
+  </button>
+</div>

@@ -248,6 +248,11 @@
   backdrop-filter: blur(24px);
 }
 
+// Blur (filter)
+.blur-2xl {
+  filter: blur(40px);
+}
+
 // Cursor
 .cursor-auto {
   cursor: auto;

@@ -14,3 +14,8 @@ $border-radius-values: (4, 8, 10, 12, 14, 16, 18, 20, 24, 32);
     border-end-end-radius: #{$value}px;
   }
 }
+
+.border-background {
+  border-color: $background;
+  border-style: solid;
+}

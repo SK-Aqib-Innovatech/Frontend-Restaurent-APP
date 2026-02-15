@@ -1,0 +1,37 @@
+<div class="px-4 mb-8">
+  <div class="bg-card rounded-xl p-5 border border-white/5 relative overflow-hidden">
+    <!-- Glow Effect -->
+    <div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl"></div>
+
+    <div class="d-flex justify-between items-start relative z-10">
+      <div>
+        <p class="text-primary text-xs font-bold uppercase tracking-wider">Rewards Points</p>
+        <p class="text-3xl font-extrabold mt-1">
+          {{ user.rewardPoints }}
+          <span class="text-sm font-normal text-muted">pts</span>
+        </p>
+      </div>
+
+      <button
+        (click)="redeem.emit()"
+        class="bg-primary/20 text-primary px-4 py-2 rounded-lg text-sm font-bold"
+      >
+        Redeem
+      </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="mt-6">
+      <div class="d-flex justify-between text-xs mb-2">
+        <span class="text-muted">Next level: {{ user.nextLevel }}</span>
+        <span class="text-white font-bold">{{ user.pointsToGo }} pts to go</span>
+      </div>
+      <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+        <div
+          class="bg-primary h-full transition-all duration-500"
+          [style.width.%]="user.progress"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>

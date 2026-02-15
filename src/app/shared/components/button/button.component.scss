@@ -43,6 +43,13 @@
     font-size: $text-xl;
   }
 
+  &--icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: $text-base;
+  }
+
   // Variants
   &--primary {
     background: $primary;
@@ -81,6 +88,15 @@
 
     &:hover:not(:disabled) {
       background: rgba($primary, 0.1);
+    }
+  }
+
+  &--danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+
+    &:hover:not(:disabled) {
+      background: rgba(239, 68, 68, 0.2);
     }
   }
 

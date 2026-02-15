@@ -3,6 +3,10 @@
 // ==========================================================================
 
 // Quick flex helpers
+.flex {
+  display: flex;
+}
+
 .flex-height-grower {
   height: 1px;
   margin-top: -1px;
