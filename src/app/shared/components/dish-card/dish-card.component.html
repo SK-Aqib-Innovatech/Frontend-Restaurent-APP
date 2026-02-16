@@ -16,11 +16,7 @@
         [class]="getBadgeClass()"
         class="text-white text-[10px] font-extrabold px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg flex items-center gap-1.5"
       >
-        <svg *ngIf="dish.badge.icon" class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-          <path
-            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-          />
-        </svg>
+        <i *ngIf="dish.badge.icon" class="fa-solid text-[10px]" [ngClass]="getBadgeIconClass(dish.badge.icon)"></i>
         {{ dish.badge.text }}
       </span>
     </div>
@@ -30,18 +26,16 @@
       (click)="onFavoriteClick($event)"
       class="absolute top-4 right-4 w-10 h-10 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white transition-all hover:bg-black/60"
     >
-      <svg
-        class="w-5 h-5"
-        [class.fill-primary]="dish.isFavorite"
-        [class.fill-none]="!dish.isFavorite"
-        stroke="currentColor"
-        stroke-width="2"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-        />
-      </svg>
+      <i
+        class="w-5 h-5 text-lg flex items-center justify-center"
+        [ngClass]="{
+          'fa-heart': true,
+          'fa-solid': !!dish.isFavorite,
+          'fa-regular': !dish.isFavorite,
+          'text-primary': !!dish.isFavorite,
+          'text-white': !dish.isFavorite
+        }"
+      ></i>
     </button>
 
     <!-- Bottom Info -->
@@ -73,9 +67,7 @@
       (click)="onAdd()"
       class="flex-1 bg-primary text-white font-extrabold py-3.5 rounded-2xl flex items-center justify-center gap-2 shadow-lg shadow-primary/25 active:scale-95 transition-transform"
     >
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
-      </svg>
+      <i class="fa-solid fa-plus w-5 h-5 text-base flex items-center justify-center"></i>
       Add to Order
     </button>
   </div>

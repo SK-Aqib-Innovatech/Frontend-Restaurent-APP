@@ -39,6 +39,16 @@ export class DishCardComponent {
     this.toggleFavorite.emit(this.dish.id);
   }
 
+  getBadgeIconClass(icon?: string): string {
+    const iconMap: Record<string, string> = {
+      star: 'fa-star',
+      sell: 'fa-tag',
+      fire: 'fa-fire-flame-curved',
+    };
+
+    return icon ? iconMap[icon] ?? 'fa-circle' : 'fa-circle';
+  }
+
   getBadgeClass(): string {
     if (!this.dish.badge) return '';
 

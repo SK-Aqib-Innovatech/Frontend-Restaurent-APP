@@ -13,4 +13,17 @@ export class ProfileMenuSectionComponent {
   @Input({ required: true }) title!: string;
   @Input() items: ProfileMenuItem[] = [];
   @Output() itemClick = new EventEmitter<ProfileMenuItem>();
+
+  getIconClass(icon: string): string {
+    const iconMap: Record<string, string> = {
+      shopping_bag: 'fa-bag-shopping',
+      credit_card: 'fa-credit-card',
+      location_on: 'fa-location-dot',
+      notifications: 'fa-bell',
+      help: 'fa-circle-question',
+      language: 'fa-language',
+    };
+
+    return iconMap[icon] ?? 'fa-circle';
+  }
 }

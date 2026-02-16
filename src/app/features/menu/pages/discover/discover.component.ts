@@ -96,4 +96,16 @@ export class DiscoverComponent {
   onNotifications(): void {
     console.log('View notifications');
   }
+
+  getCategoryIconClass(icon: string): string {
+    const iconMap: Record<string, string> = {
+      set_meal: 'fa-fish',
+      ramen_dining: 'fa-bowl-food',
+      local_pizza: 'fa-pizza-slice',
+      lunch_dining: 'fa-burger',
+      bakery_dining: 'fa-cake-candles',
+    };
+
+    return iconMap[icon] ?? 'fa-utensils';
+  }
 }

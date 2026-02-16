@@ -52,6 +52,7 @@ $text-xl: 20px; // 1.25rem
 $text-2xl: 24px; // 1.5rem
 $text-3xl: 30px; // 1.875rem
 $text-4xl: 36px; // 2.25rem
+$text-5xl: 48px;
 
 // Font Weights
 $font-normal: 400;
@@ -74,7 +75,7 @@ $rounded-lg: 16px;
 $rounded-xl: 20px;
 $rounded-2xl: 24px;
 $rounded-3xl: 32px;
-$rounded-full: 9999px;
+$rounded-full: 100%;
 
 // --------------------------------------------------------------------------
 // SHADOWS

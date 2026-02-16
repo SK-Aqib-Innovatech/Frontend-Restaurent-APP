@@ -39,6 +39,6 @@ export class WelcomeComponent {
   onContinueAsGuest(): void {
     // Navigate to main app as guest
     console.log('Continue as guest');
-    // this.router.navigate(['/home']);
+    this.router.navigate(['/home']);
   }
 }

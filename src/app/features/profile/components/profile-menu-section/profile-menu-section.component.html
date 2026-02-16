@@ -11,18 +11,14 @@
     >
       <div class="d-flex items-center gap-4">
         <div class="w-10 h-10 rounded-lg bg-primary/20 d-flex items-center justify-center">
-          <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24">
-            <use [attr.xlink:href]="'#' + item.icon"></use>
-          </svg>
+          <i class="fa-solid text-primary text-base" [ngClass]="getIconClass(item.icon)"></i>
         </div>
         <span class="font-medium">{{ item.label }}</span>
       </div>
 
       <div class="d-flex items-center gap-1">
         <span *ngIf="item.badge" class="text-sm text-muted">{{ item.badge }}</span>
-        <svg class="w-6 h-6 text-muted" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" />
-        </svg>
+        <i class="fa-solid fa-chevron-right w-6 h-6 text-muted text-sm flex items-center justify-center"></i>
       </div>
     </button>
   </div>
